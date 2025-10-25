@@ -27,7 +27,7 @@ namespace NZWalks.UI.Controllers
                 // Get All Regions from Web API
                 var client = httpClientFactory.CreateClient();
 
-                var httpResponseMessage = await client.GetAsync("https://localhost:7081/api/regions");
+                var httpResponseMessage = await client.GetAsync("http://localhost:5249/api/regions");
 
                 httpResponseMessage.EnsureSuccessStatusCode();
 
@@ -36,6 +36,7 @@ namespace NZWalks.UI.Controllers
             catch (Exception ex)
             {
                 // Log the exception
+                //Template
             }
 
             return View(response);

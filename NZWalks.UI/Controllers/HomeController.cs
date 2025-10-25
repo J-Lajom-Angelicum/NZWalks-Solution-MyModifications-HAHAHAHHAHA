@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NZWalks.UI.Models;
+using NZWalks.UI.Models.DTO;
 using System.Diagnostics;
 
 namespace NZWalks.UI.Controllers
@@ -11,6 +12,12 @@ namespace NZWalks.UI.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+        }
+
+        [HttpPost]
+        public IActionResult Register(RegisterDto register)
+        {
+            return View();
         }
 
         public IActionResult Index()
